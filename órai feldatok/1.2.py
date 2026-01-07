@@ -24,3 +24,15 @@ with open('adatok/nyelvek.csv' , 'r', encoding='utf-8') as forrasfajl:
 
 print (min(years))
 print (max(years))
+
+legfiatalabb_nyelv = nyelvek[0]
+for nyelv in nyelvek:
+    if nyelv[0] < legfiatalabb_nyelv[0]:
+        legfiatalabb_nyelv[0] = nyelv[0]
+print(f'{legfiatalabb_nyelv[0]} a legfiatalabb nyelv kiadási éve')
+
+legid_nyelv = nyelvek[0]
+for nyelv in nyelvek:
+    if nyelv[0] < legid_nyelv[0]:
+        legid_nyelv[0] = nyelv[0]
+print(f'{legid_nyelv[0]} a legidősebb nyelv kiadási éve')
